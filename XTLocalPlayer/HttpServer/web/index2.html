@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>暴风影音WIFI传输</title>
+    <style type="text/css">
+        html,body {
+            font-size: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        hr,
+        button,
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft Yahei", "宋体", Arial, Verdana;
+            background-color: transparent;
+        }
+
+        body {
+            font-size: 14px;
+            color: #191919;
+            background: #fff;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        iframe {
+            display: block;
+        }
+
+        address,
+        cite,
+        dfn,
+        em,
+        var,
+        i {
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        dfn {
+            font-family: Arial;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        fieldset,
+        img,
+        button,
+        input,
+        select,
+        textarea {
+            border: 0;
+            font-size: 12px;
+            background-color: transparent;
+            outline: 0;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        hr {
+            display: block;
+            height: 0.1rem;
+            border: 0;
+            border-top: 0.1rem solid #ccc;
+            margin: 0.1em 0;
+            padding: 0;
+        }
+
+        *:focus {
+            outline: none;
+            outline-color: transparent;
+        }
+
+        .transfer-m {
+            width: 1380px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .transfer-head {
+            height: 150px;
+            padding-left: 80px;
+            background: #fff;
+            border-bottom: #c8ccd5 1px solid;
+            overflow: hidden;
+        }
+
+        .transfer-logo {
+            display: block;
+            width: 485px;
+            height: 60px;
+            float: left;
+            margin: 46px 32px 0 0;
+            background: url("images/file_icons.png") no-repeat;
+            background-position: 0 0;
+            text-indent: -9999px;
+        }
+
+        .transfer-text {
+            display: block;
+            float: left;
+            height: 150px;
+            width: 533px;
+            font-size: 18px;
+            color: #0082ff;
+            background-position: 0 0;
+        }
+
+        .transfer-box {
+            width: 1380px;
+            margin: 0 auto;
+        }
+
+        .transfer-file-box {
+            width: 379px;
+            padding-top: 62px;
+            float: left;
+            border-left: #c8ccd5 1px solid;
+            background: #e8f3fc;
+        }
+
+        .transfer-list-box {
+            width: 999px;
+            background: #fff;
+            float: left;
+            border-left: #c8ccd5 1px solid;
+        }
+
+        .file-box {
+            width: 218px;
+            height: 218px;
+            border: #c8ccd5 1px dashed;
+            background: url("images/file_icons.png") center no-repeat;
+            background-position: -250px -150px;
+            margin: 0 auto 20px;
+            cursor: pointer;
+        }
+
+        .transfer-file-text {
+            font-size: 16px;
+            color: #333;
+            width: 220px;
+            text-align: center;
+            margin: 0 auto 50px;
+        }
+
+        .transfer-btn {
+            display: block;
+            width: 240px;
+            height: 82px;
+            background: url("images/file_icons.png") no-repeat;
+            background-position: 0 -90px;
+            margin: 0 auto;
+        }
+
+        .transfer-btn:hover {
+            background-position: 0 -206px;
+        }
+
+        .transfer-list-tit {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 20px;
+            font-size: 16px;
+            color: #333;
+            background: #edf6ff;
+            border-bottom: #c8ccd5 1px solid;
+            border-right: #c8ccd5 1px solid;
+        }
+
+        .transfer-list li {
+            height: 44px;
+            line-height: 44px;
+            border-bottom: #e6e8ee 1px solid;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .transfer-list li:nth-of-type(even) {
+            background: #f7fbff;
+        }
+
+        .transfer-name {
+            display: block;
+            float: left;
+            width: 550px;
+            cursor: pointer;
+        }
+
+        .complete,
+        .fail,
+        .wait,
+        .cancel {
+            display: block;
+            width: 160px;
+            line-height: 44px;
+            float: left;
+            background: url("images/file_icons.png") no-repeat;
+            padding-left: 24px;
+        }
+
+        .complete {
+            background-position: -468px -60px;
+        }
+
+        .fail {
+            background-position: -465px -168px;
+        }
+
+        .wait {
+            background-position: -468px -130px;
+        }
+
+        .cancel {
+            background-position: -470px -95px;
+            cursor: pointer;
+        }
+
+        .webuploader-container {
+            position: relative;
+        }
+
+        .webuploader-element-invisible {
+            position: absolute !important;
+            clip: rect(1px 1px 1px 1px);
+            /* IE6, IE7 */
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        .webuploader-pick {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 3px;
+            overflow: hidden;
+            width:240px;
+            height:82px;
+        }
+    </style>
+
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/webuploader.min.js"></script>
+</head>
+
+<body>
+    <div class="transfer-m">
+        <div class="transfer-head">
+            <h1 class="transfer-logo">暴风影音Wi-Fi传输</h1>
+            <p class="transfer-text">
+                <img style="margin-top:80px;" src="images/title.png">
+            </p>
+        </div>
+        <div class="transfer-box">
+            <div class="transfer-file-box" id="uploader">
+                <div id="dragui" style="display: none;">
+                    <div class="file-box"></div>
+                    <p class="transfer-file-text">点击或拖拽到此处上传</p>
+                </div>
+                <a id="swfpicker" href="javascript:void(0);" class="transfer-btn" title="选择文件 可同时上传多个"></a>
+                <div id="h5picker" style="width:379px;height:500px;position: absolute;margin-top: -455px;display: none;"></div>
+            </div>
+            <div class="transfer-list-box">
+                <div class="transfer-list-tit">文件列表</div>
+                <ul class="transfer-list" style="border-right: #e6e8ee 1px solid;overflow:auto;" id="thelist" style="overflow:auto;"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // $(function(){
+            var uploader, win_h,upbutton="#swfpicker";
+            function resizefunc() {
+                win_h = $(window).height();
+                $("#thelist").css('height', win_h - 214);
+                $(".transfer-list-box").css('height', win_h - 154);
+                $("#uploader").css('height', win_h - 214);
+            };
+            function isIE() {
+                if (!!window.ActiveXObject || "ActiveXObject" in window) {
+                    return true;
+                } else {
+                    return false;
+                };
+            };
+            function bytesToSize(bytes) {
+                var i, k, sizes;
+                if (bytes === 0) {
+                    return '0 B';
+                };
+                k = 1024;
+                sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+                i = Math.floor(Math.log(bytes) / Math.log(k));
+                return (bytes / Math.pow(k, i)).toFixed(2) + ' ' + sizes[i];
+            };
+            function deluploader(id) {
+                var li = $('#' + id);
+                li.find('.wait').attr("class", "fail").html("传输失败");
+                li.find('.cancel').remove();
+                uploader.removeFile(id, true); //从上传文件列表中删除
+            };
+            function upname(str){
+                var l = str.lastIndexOf(".");
+                if(l>24){
+                    return str.substring(0,24)+"..."+str.substring(l);
+                };
+                return str;
+            };
+            $(window).resize(resizefunc);
+            resizefunc();
+            if (typeof FileReader != 'undefined' && typeof XMLHttpRequest != 'undefined') {
+                var css;
+                $("#dragui").css("display", "block");
+                $("#h5picker").css("display", "block");
+                upbutton = "#h5picker";
+                css = document.createElement('style');
+                css.type='text/css';
+                css.appendChild(document.createTextNode('.webuploader-pick {width:379px;height:500px;}'));
+                document.getElementsByTagName('head')[0].appendChild(css);
+            };
+            if (!WebUploader.Uploader.support()) {
+                alert('暴风影音WIFI传输,不支持您的浏览器,请升级 flash 播放器');
+            } else {
+                uploader = WebUploader.create({
+                    auto: true,
+                    pick: upbutton,
+                    dnd: document.body,
+                    server: '/scripts/uploadify.html',
+                    //server: '/fileupload.php',
+                    swf: '/scripts/Uploader.swf',
+                    fileSingleSizeLimit: 4 * 1024 * 1024 * 1024// 限制在4G
+                });
+                // 当有文件被添加进队列的时候
+                uploader.on('fileQueued', function (file) {
+                    $("#thelist").append('<li id="' + file.id + '"><span class="transfer-name" title="('+file.name+' (' + bytesToSize(file.size) +')">' + upname(file.name) + ' (' + bytesToSize(file.size) + ')</span><em class="wait">等待中</em><em class="cancel" onclick=javascript:deluploader("' + file.id + '");>取消</em></li>');
+                });
+                // 文件上传过程中创建进度条实时显示。
+                uploader.on('uploadProgress', function (file, percentage) {
+                    $('#' + file.id).find('.wait').html(parseInt(percentage * 100) + '%');
+                });
+                uploader.on('uploadSuccess', function (file) {
+                    var li = $('#' + file.id);
+                    li.find('.wait').attr("class", "complete").html("完成");
+                    li.find('.cancel').remove();
+                });
+                uploader.on('uploadError', function (file) {
+                    deluploader(file.id);
+                });
+                /**
+                 * 验证文件格式以及文件大小
+                 */
+                uploader.on("error", function (type, handler) {
+                    if (type == "F_EXCEED_SIZE") {
+                        alert("网页传输不支持过大文件，请尝试使用iTunes进行传输");
+                    };
+                });
+            }
+        // })
+
+    </script>
+</body>
+
+</html>

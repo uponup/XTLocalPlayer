@@ -1,0 +1,43 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - JPKit (0.1.6):
+    - MJRefresh (~> 3.2.0)
+  - MJRefresh (3.2.0)
+  - PureLayout (3.1.5)
+  - ZFPlayer (3.2.13):
+    - ZFPlayer/Core (= 3.2.13)
+  - ZFPlayer/AVPlayer (3.2.13):
+    - ZFPlayer/Core
+  - ZFPlayer/ControlView (3.2.13):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (3.2.13)
+
+DEPENDENCIES:
+  - FMDB (~> 2.7.5)
+  - JPKit
+  - PureLayout (~> 3.0)
+  - ZFPlayer (~> 3.0)
+  - ZFPlayer/AVPlayer (~> 3.0)
+  - ZFPlayer/ControlView (~> 3.0)
+
+SPEC REPOS:
+  "git@github.com:uponup/JPSpec.git":
+    - JPKit
+  https://github.com/CocoaPods/Specs.git:
+    - FMDB
+    - MJRefresh
+    - PureLayout
+    - ZFPlayer
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  JPKit: 0beeffc896ebfec799c2d8b2060fbe0cdb29b7c4
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
+  ZFPlayer: b2ba40c924e1b9a7f0a670632c4235ffbe6ee055
+
+PODFILE CHECKSUM: 9bdf32eaa6fb1f0c527a354571cb158fdcfe1a95
+
+COCOAPODS: 1.8.0

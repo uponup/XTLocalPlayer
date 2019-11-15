@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  XTLocalPlayer
+//
+//  Created by 龙格 on 2019/11/13.
+//  Copyright © 2019 Paul Gao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Common.h"
+#import "Setting.h"
+
+#endif /* PrefixHeader_pch */

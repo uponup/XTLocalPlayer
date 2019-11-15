@@ -1,0 +1,6 @@
+framework module JPKit {
+  umbrella header "JPKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

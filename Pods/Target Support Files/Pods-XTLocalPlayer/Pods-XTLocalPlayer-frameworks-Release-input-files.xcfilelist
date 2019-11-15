@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
+${BUILT_PRODUCTS_DIR}/JPKit/JPKit.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework
+${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework
