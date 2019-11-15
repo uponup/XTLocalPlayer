@@ -54,10 +54,8 @@
 }
 
 - (IBAction)deleteButtonAction:(id)sender {
-    
     // todo delete
-    AudioDetailController *detailVc = [AudioDetailController new];
-    [self.navigationController pushViewController:detailVc animated:YES];
+    
 }
 
 - (IBAction)localButtonAction:(id)sender {
