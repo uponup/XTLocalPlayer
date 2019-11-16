@@ -12,6 +12,8 @@
 #import "NavigationController.h"
 #import "HomeViewController.h"
 
+#import "AppDelegate+Launch.h"
+
 @interface AppDelegate ()
 
 @end
@@ -25,6 +27,8 @@
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
     
+    [self showLaunchImage];
+
     HomeViewController *homeVc = [HomeViewController new];
     NavigationController *nav = [[NavigationController alloc] initWithRootViewController:homeVc];
     self.window.rootViewController = nav;

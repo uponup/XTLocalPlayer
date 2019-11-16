@@ -13,6 +13,8 @@
 #import "VideoCell.h"
 #import "UITableView+Extend.h"
 
+#import "LaunchView.h"
+
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *layoutLocalBtnCenter;
@@ -32,18 +34,23 @@
 
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerCell:[VideoCell class]];
+    
+//    LaunchView *launchView = [[LaunchView alloc] init];
+//    [[UIApplication sharedApplication].keyWindow addSubview:launchView];
+//    [launchView autoPinEdgesToSuperviewEdges];
+//    [launchView animate];
 }
 
 #pragma mark - Life Cycle
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [self refreshData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 #pragma mark - Click Action

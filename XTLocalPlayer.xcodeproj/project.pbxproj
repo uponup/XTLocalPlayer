@@ -63,6 +63,10 @@
 		39FBEB4A237F93E9008DE3A8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */; };
 		39FBEB4B237F93E9008DE3A8 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */; };
 		39FBEB54237F99BC008DE3A8 /* ImpactFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB53237F99BC008DE3A8 /* ImpactFeedback.m */; };
+		39FBEB57237FA090008DE3A8 /* Comets.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB56237FA090008DE3A8 /* Comets.m */; };
+		39FBEB5A237FA886008DE3A8 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB59237FA886008DE3A8 /* UIImage+Extend.m */; };
+		39FBEB6A237FB120008DE3A8 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB69237FB120008DE3A8 /* LaunchView.m */; };
+		39FBEB70237FB1B9008DE3A8 /* AppDelegate+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB6F237FB1B9008DE3A8 /* AppDelegate+Launch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +176,14 @@
 		39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		39FBEB52237F99BC008DE3A8 /* ImpactFeedback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImpactFeedback.h; sourceTree = "<group>"; };
 		39FBEB53237F99BC008DE3A8 /* ImpactFeedback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImpactFeedback.m; sourceTree = "<group>"; };
+		39FBEB55237FA090008DE3A8 /* Comets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comets.h; sourceTree = "<group>"; };
+		39FBEB56237FA090008DE3A8 /* Comets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comets.m; sourceTree = "<group>"; };
+		39FBEB58237FA886008DE3A8 /* UIImage+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		39FBEB59237FA886008DE3A8 /* UIImage+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		39FBEB68237FB120008DE3A8 /* LaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchView.h; sourceTree = "<group>"; };
+		39FBEB69237FB120008DE3A8 /* LaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchView.m; sourceTree = "<group>"; };
+		39FBEB6E237FB1B9008DE3A8 /* AppDelegate+Launch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Launch.h"; sourceTree = "<group>"; };
+		39FBEB6F237FB1B9008DE3A8 /* AppDelegate+Launch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Launch.m"; sourceTree = "<group>"; };
 		44973824B14B4C083E787DE0 /* Pods-XTLocalPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTLocalPlayer.debug.xcconfig"; path = "Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		E2D11304254F326B6FBEA159 /* Pods-XTLocalPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTLocalPlayer.release.xcconfig"; path = "Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		F9AF23AEAF8825989511FD28 /* Pods_XTLocalPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTLocalPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,11 +213,10 @@
 		39923C83237CF37E00EBDAD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				39FBEB4C237F98A7008DE3A8 /* VideoPlayerView */,
+				39FBEB71237FB221008DE3A8 /* PopMenu */,
 				39FBEB51237F98DF008DE3A8 /* Impact */,
 				39FBEB4D237F98C2008DE3A8 /* Comets */,
-				39FBEB4C237F98A7008DE3A8 /* VideoPlayerView */,
-				39923C91237D1B1C00EBDAD8 /* JPPopMenuView.h */,
-				39923C90237D1B1C00EBDAD8 /* JPPopMenuView.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -337,6 +348,8 @@
 				39923D3B237E5A4F00EBDAD8 /* UITableView+Extend.m */,
 				39923D5A237EA7C800EBDAD8 /* NSFileManager+Category.h */,
 				39923D5B237EA7C800EBDAD8 /* NSFileManager+Category.m */,
+				39FBEB58237FA886008DE3A8 /* UIImage+Extend.h */,
+				39FBEB59237FA886008DE3A8 /* UIImage+Extend.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -412,6 +425,8 @@
 				39DF13B8237C053F00BF04F8 /* Sources */,
 				39DF139F237C02E500BF04F8 /* AppDelegate.h */,
 				39DF13A0237C02E500BF04F8 /* AppDelegate.m */,
+				39FBEB6E237FB1B9008DE3A8 /* AppDelegate+Launch.h */,
+				39FBEB6F237FB1B9008DE3A8 /* AppDelegate+Launch.m */,
 			);
 			path = XTLocalPlayer;
 			sourceTree = "<group>";
@@ -429,8 +444,9 @@
 		39DF13B7237C052900BF04F8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				39DF13C5237C060200BF04F8 /* Home */,
 				39DF13C4237C05F200BF04F8 /* Base */,
+				39FBEB67237FB10E008DE3A8 /* Login */,
+				39DF13C5237C060200BF04F8 /* Home */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -499,6 +515,8 @@
 		39FBEB4D237F98C2008DE3A8 /* Comets */ = {
 			isa = PBXGroup;
 			children = (
+				39FBEB55237FA090008DE3A8 /* Comets.h */,
+				39FBEB56237FA090008DE3A8 /* Comets.m */,
 			);
 			name = Comets;
 			sourceTree = "<group>";
@@ -510,6 +528,24 @@
 				39FBEB53237F99BC008DE3A8 /* ImpactFeedback.m */,
 			);
 			name = Impact;
+			sourceTree = "<group>";
+		};
+		39FBEB67237FB10E008DE3A8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				39FBEB68237FB120008DE3A8 /* LaunchView.h */,
+				39FBEB69237FB120008DE3A8 /* LaunchView.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		39FBEB71237FB221008DE3A8 /* PopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				39923C91237D1B1C00EBDAD8 /* JPPopMenuView.h */,
+				39923C90237D1B1C00EBDAD8 /* JPPopMenuView.m */,
+			);
+			name = PopMenu;
 			sourceTree = "<group>";
 		};
 		3CF9ABC8061907A687A202A1 /* Frameworks */ = {
@@ -643,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39DF13AF237C02E500BF04F8 /* main.m in Sources */,
+				39FBEB5A237FA886008DE3A8 /* UIImage+Extend.m in Sources */,
 				39923CDD237D42EB00EBDAD8 /* MultipartMessageHeaderField.m in Sources */,
 				39923CDC237D42EB00EBDAD8 /* WebSocket.m in Sources */,
 				39923CE3237D42EB00EBDAD8 /* DDRange.m in Sources */,
@@ -654,6 +691,8 @@
 				39923CE2237D42EB00EBDAD8 /* DDData.m in Sources */,
 				39DF13C0237C05B600BF04F8 /* UIViewController+AOP.m in Sources */,
 				39923D04237D434300EBDAD8 /* DDASLLogger.m in Sources */,
+				39FBEB6A237FB120008DE3A8 /* LaunchView.m in Sources */,
+				39FBEB57237FA090008DE3A8 /* Comets.m in Sources */,
 				39FBEB4A237F93E9008DE3A8 /* SettingsViewController.m in Sources */,
 				39923C92237D1B1C00EBDAD8 /* JPPopMenuView.m in Sources */,
 				39923CEC237D431700EBDAD8 /* MyHTTPConnection.m in Sources */,
@@ -674,6 +713,7 @@
 				39923D0B237D434300EBDAD8 /* DDFileLogger.m in Sources */,
 				39923D03237D434300EBDAD8 /* DDTTYLogger.m in Sources */,
 				39923D56237E83EC00EBDAD8 /* BaseModel.m in Sources */,
+				39FBEB70237FB1B9008DE3A8 /* AppDelegate+Launch.m in Sources */,
 				39FBEB54237F99BC008DE3A8 /* ImpactFeedback.m in Sources */,
 				39923D05237D434300EBDAD8 /* ContextFilterLogFormatter.m in Sources */,
 				39DF13BD237C05A900BF04F8 /* BaseViewController.m in Sources */,
