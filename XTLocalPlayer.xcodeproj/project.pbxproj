@@ -60,6 +60,8 @@
 		39DF13BD237C05A900BF04F8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13BC237C05A900BF04F8 /* BaseViewController.m */; };
 		39DF13C0237C05B600BF04F8 /* UIViewController+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13BF237C05B600BF04F8 /* UIViewController+AOP.m */; };
 		39DF13C3237C05E100BF04F8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13C2237C05E100BF04F8 /* NavigationController.m */; };
+		39FBEB4A237F93E9008DE3A8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */; };
+		39FBEB4B237F93E9008DE3A8 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +166,9 @@
 		39DF13C6237C061700BF04F8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		39DF13CA237C087800BF04F8 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		39DF13CB237C088B00BF04F8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		39FBEB47237F93E9008DE3A8 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		44973824B14B4C083E787DE0 /* Pods-XTLocalPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTLocalPlayer.debug.xcconfig"; path = "Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		E2D11304254F326B6FBEA159 /* Pods-XTLocalPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTLocalPlayer.release.xcconfig"; path = "Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		F9AF23AEAF8825989511FD28 /* Pods_XTLocalPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTLocalPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,6 +475,9 @@
 				39923C9F237D2EC000EBDAD8 /* TransportViewController.h */,
 				39923CA0237D2EC000EBDAD8 /* TransportViewController.m */,
 				39923CA1237D2EC000EBDAD8 /* TransportViewController.xib */,
+				39FBEB47237F93E9008DE3A8 /* SettingsViewController.h */,
+				39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */,
+				39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */,
 				39923D3D237E5FC000EBDAD8 /* Views */,
 			);
 			name = Home;
@@ -516,6 +524,7 @@
 				TargetAttributes = {
 					39DF139B237C02E500BF04F8 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -551,6 +560,7 @@
 				39DF13AC237C02E500BF04F8 /* LaunchScreen.storyboard in Resources */,
 				39DF13A9237C02E500BF04F8 /* Assets.xcassets in Resources */,
 				39923D30237D6A9C00EBDAD8 /* HomeViewController.xib in Resources */,
+				39FBEB4B237F93E9008DE3A8 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +625,7 @@
 				39923CE2237D42EB00EBDAD8 /* DDData.m in Sources */,
 				39DF13C0237C05B600BF04F8 /* UIViewController+AOP.m in Sources */,
 				39923D04237D434300EBDAD8 /* DDASLLogger.m in Sources */,
+				39FBEB4A237F93E9008DE3A8 /* SettingsViewController.m in Sources */,
 				39923C92237D1B1C00EBDAD8 /* JPPopMenuView.m in Sources */,
 				39923CEC237D431700EBDAD8 /* MyHTTPConnection.m in Sources */,
 				39923CD9237D42EB00EBDAD8 /* HTTPRedirectResponse.m in Sources */,
@@ -780,6 +791,7 @@
 			baseConfigurationReference = 44973824B14B4C083E787DE0 /* Pods-XTLocalPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C6CFW7YT9;
 				GCC_PREFIX_HEADER = /Users/paulgao/learn/TmTech/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
@@ -791,6 +803,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tm.XTLocalPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XTLocalPlayer/XTLocalPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -800,6 +815,7 @@
 			baseConfigurationReference = E2D11304254F326B6FBEA159 /* Pods-XTLocalPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C6CFW7YT9;
 				GCC_PREFIX_HEADER = /Users/paulgao/learn/TmTech/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
@@ -811,6 +827,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tm.XTLocalPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XTLocalPlayer/XTLocalPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

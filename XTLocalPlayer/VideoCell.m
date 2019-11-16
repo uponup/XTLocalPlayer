@@ -65,13 +65,13 @@
     if (size < 1024) {
         fileName = [NSString stringWithFormat:@"%.fb", size];
     }else if (size < 1024 * 1024) {
-        fileName = [NSString stringWithFormat:@"%.fk", size/1024];
+        fileName = [NSString stringWithFormat:@"%.fKb", size/1024];
     }else if (size < 1024 * 1024 * 1024){
-        fileName = [NSString stringWithFormat:@"%.fM", size/1024/1024];
+        fileName = [NSString stringWithFormat:@"%.fMb", size/1024/1024];
     }else {
-        fileName = [NSString stringWithFormat:@"%.fG", size/1024/1024/1024];
+        fileName = [NSString stringWithFormat:@"%.fGb", size/1024/1024/1024];
     }
-    return fileName;
+    return [NSString stringWithFormat:NSLocalizedString(@"size:%@", nil), fileName];
 }
 
 - (NSString *)_dateWithTimestamp:(NSTimeInterval)timestamp {
