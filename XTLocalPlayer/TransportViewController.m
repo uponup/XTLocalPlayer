@@ -58,5 +58,4 @@
     return _httpServer;
 }
 
-
 @end

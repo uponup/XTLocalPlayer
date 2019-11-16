@@ -15,6 +15,7 @@
 #import "Utils.h"
 #import "FileModel.h"
 #import "FileLogDao.h"
+#import "ImpactFeedback.h"
 
 
 #endif /* Common_h */

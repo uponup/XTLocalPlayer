@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImpactFeedback : NSObject
 
++ (void)feedbackGeneratorStyle:(UIImpactFeedbackStyle)style;
+
 @end
 
 NS_ASSUME_NONNULL_END
