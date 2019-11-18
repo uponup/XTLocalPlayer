@@ -12,8 +12,14 @@
 @implementation AppDelegate (Launch)
 
 - (void)showLaunchImage {
+    
+    UIViewController *launchVc = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    launchVc.view.frame = CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height);
+    [self.window addSubview:launchVc.view];
+    
     LaunchView *launchView = [[LaunchView alloc] init];
-    [[UIApplication sharedApplication].keyWindow addSubview:launchView];
+    launchVc.view.backgroundColor = UIColor.redColor;
+    [launchVc.view addSubview:launchView];
     [launchView autoPinEdgesToSuperviewEdges];
     [launchView animate];
 }

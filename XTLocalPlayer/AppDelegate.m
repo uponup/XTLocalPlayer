@@ -22,13 +22,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     self.window = [[UIWindow alloc] initWithFrame:kScreen_Bounds];
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
     
-    [self showLaunchImage];
-
+//    [self showLaunchImage];
+    
     HomeViewController *homeVc = [HomeViewController new];
     NavigationController *nav = [[NavigationController alloc] initWithRootViewController:homeVc];
     self.window.rootViewController = nav;

@@ -28,9 +28,6 @@
     [super viewDidLoad];
     
     self.transportUrlLabel.text = [NSString stringWithFormat:@"http://%@:%hu", [Utils getIpAddresses], [self.httpServer listeningPort]];
-    
-    
-    
 }
 
 

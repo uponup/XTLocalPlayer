@@ -183,6 +183,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
         CLog(@"存储路径：%@", fileRelativePath);
         CLog(@"文件大小：%@", [NSFileManager fileSizWithPath:filePath]);
         [FileLogDao addFileLog:model];
+        
+        // 传输完成触感反馈
+        [ImpactFeedback feedbackGeneratorStyle:UIImpactFeedbackStyleHeavy];
     }
 }
 

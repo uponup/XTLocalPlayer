@@ -1,13 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">
-			</head>
-	<body>
-		<form action="upload.html" method="post" enctype="multipart/form-data" accept-charset="utf-8">
-			<input type="file" name="upload1"><br/>
-                <input type="file" name="upload2"><br/>
-				<input type="submit" value="Submit">
-					</form>
-	</body>
+    <head>
+        <link rel="stylesheet" type="" href="index.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>文件上传工具</title>
+    </head>
+    <body>
+        <div class="bg">
+            <img src="/images/logo.png"></img>
+            <form class="upload_form" action="upload.html" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+                <input type="file" name="upload1" id="select">
+                <input type="submit" name="提交" id="submit">
+            </form>
+        </div>
+    </body>
 </html>

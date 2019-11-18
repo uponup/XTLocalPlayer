@@ -60,9 +60,8 @@
         [self.layer addSublayer:[comets animate]];
     }
     
-//    [NSThread sleepForTimeInterval:10];
-    
-//    [self removeFromSuperview];
+    [NSThread sleepForTimeInterval:2];
+    [self removeFromSuperview];
 }
 
 @end

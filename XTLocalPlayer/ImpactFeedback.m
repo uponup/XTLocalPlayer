@@ -13,13 +13,15 @@
 
 + (void)feedbackGeneratorStyle:(UIImpactFeedbackStyle)style {
     if (@available(iOS 10.0, *)) {
-        if (style > 2) {
-            UISelectionFeedbackGenerator *feedbackSelection = [[UISelectionFeedbackGenerator alloc] init];
-            [feedbackSelection selectionChanged];
-        }else {
-            UIImpactFeedbackGenerator *feedbackGenerate = [[UIImpactFeedbackGenerator alloc] initWithStyle:style];
-            [feedbackGenerate impactOccurred];
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (style > 2) {
+                UISelectionFeedbackGenerator *feedbackSelection = [[UISelectionFeedbackGenerator alloc] init];
+                [feedbackSelection selectionChanged];
+            }else {
+                UIImpactFeedbackGenerator *feedbackGenerate = [[UIImpactFeedbackGenerator alloc] initWithStyle:style];
+                [feedbackGenerate impactOccurred];
+            }
+        });
     };
 }
 

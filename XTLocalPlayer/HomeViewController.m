@@ -13,7 +13,6 @@
 #import "VideoCell.h"
 #import "UITableView+Extend.h"
 
-#import "LaunchView.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -34,11 +33,6 @@
 
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerCell:[VideoCell class]];
-    
-//    LaunchView *launchView = [[LaunchView alloc] init];
-//    [[UIApplication sharedApplication].keyWindow addSubview:launchView];
-//    [launchView autoPinEdgesToSuperviewEdges];
-//    [launchView animate];
 }
 
 #pragma mark - Life Cycle
