@@ -6,38 +6,90 @@
 	<dict>
 		<key>FMDB.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>JPKit-JPKit.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
 		<key>JPKit.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
 		<key>MJRefresh.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>Pods-XTLocalPlayer.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
 		<key>PureLayout.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
 		<key>ZFPlayer.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>06F5CDD6235E25837519792853B145A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>11575339F76C5471E2AB9DE42F282696</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6868056D761E163D10FDAF8CF1C4D9B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8592E0E389D40AC17881400ADC67ABC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8749C9646E58769B0B27F900009CCACC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93FD1F93E0C30B2749BD8A6EC148F233</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F74D66E8A4725BA821F24D4B146E5EEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
