@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,17 +28,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vf9-0E-Bri" userLabel="CustomNavView">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刑天播放器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXE-Ja-Lw0">
-                            <rect key="frame" x="25" y="60" width="107" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="34" id="3IB-Su-VkT"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNu-Sq-61S">
-                            <rect key="frame" x="362" y="61" width="36" height="32"/>
+                            <rect key="frame" x="362" y="60" width="36" height="32"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.55294117649999996" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="36" id="1am-gA-M5T"/>
@@ -50,7 +41,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2p-Lb-J2w">
-                            <rect key="frame" x="320" y="61" width="36" height="32"/>
+                            <rect key="frame" x="320" y="60" width="36" height="32"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.55294117649999996" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" image="upload"/>
                             <connections>
@@ -99,21 +90,45 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-m5-uD0">
+                            <rect key="frame" x="16" y="60" width="36" height="32"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.55294117649999996" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="08I-Gc-5ed"/>
+                                <constraint firstAttribute="height" constant="32" id="2P0-Pz-edh"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="9" minY="7" maxX="9" maxY="7"/>
+                            <state key="normal" image="ic_setting_white"/>
+                            <connections>
+                                <action selector="settingAction:" destination="-1" eventType="touchUpInside" id="mfz-lW-oJm"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刑天播放器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXE-Ja-Lw0">
+                            <rect key="frame" x="54" y="59" width="107" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="3IB-Su-VkT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.55294117647058827" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="IXE-Ja-Lw0" firstAttribute="leading" secondItem="Abp-m5-uD0" secondAttribute="trailing" constant="2" id="0Uq-se-OGo"/>
                         <constraint firstAttribute="trailing" secondItem="tpg-EP-7Pi" secondAttribute="trailing" id="4cm-67-JnI"/>
-                        <constraint firstItem="sNu-Sq-61S" firstAttribute="centerY" secondItem="IXE-Ja-Lw0" secondAttribute="centerY" id="O44-Zs-E2d"/>
+                        <constraint firstItem="IXE-Ja-Lw0" firstAttribute="centerY" secondItem="Abp-m5-uD0" secondAttribute="centerY" id="8Ie-W7-52e"/>
+                        <constraint firstItem="sNu-Sq-61S" firstAttribute="centerY" secondItem="IXE-Ja-Lw0" secondAttribute="centerY" id="NLT-27-fKx"/>
                         <constraint firstAttribute="bottom" secondItem="tpg-EP-7Pi" secondAttribute="bottom" constant="4" id="OPq-xA-We6"/>
-                        <constraint firstItem="IXE-Ja-Lw0" firstAttribute="top" secondItem="Vf9-0E-Bri" secondAttribute="top" constant="60" id="PcG-il-ae4"/>
                         <constraint firstItem="d2p-Lb-J2w" firstAttribute="height" secondItem="sNu-Sq-61S" secondAttribute="height" id="bdg-w8-TE5"/>
+                        <constraint firstItem="Abp-m5-uD0" firstAttribute="leading" secondItem="Vf9-0E-Bri" secondAttribute="leading" constant="16" id="cRe-Jc-vfm"/>
+                        <constraint firstItem="Abp-m5-uD0" firstAttribute="top" secondItem="Vf9-0E-Bri" secondAttribute="top" constant="60" id="dYe-Jr-uzV"/>
                         <constraint firstItem="sNu-Sq-61S" firstAttribute="leading" secondItem="d2p-Lb-J2w" secondAttribute="trailing" constant="6" id="exN-2c-fEi"/>
                         <constraint firstItem="d2p-Lb-J2w" firstAttribute="centerY" secondItem="sNu-Sq-61S" secondAttribute="centerY" id="gUO-1F-jej"/>
                         <constraint firstItem="dVS-el-N2G" firstAttribute="top" secondItem="tpg-EP-7Pi" secondAttribute="bottom" id="hLe-ps-QUW"/>
                         <constraint firstItem="tpg-EP-7Pi" firstAttribute="leading" secondItem="Vf9-0E-Bri" secondAttribute="leading" id="tCC-pJ-4yk"/>
                         <constraint firstItem="dVS-el-N2G" firstAttribute="centerX" secondItem="gmV-Lg-61s" secondAttribute="centerX" id="v1u-vu-ZpL"/>
                         <constraint firstItem="d2p-Lb-J2w" firstAttribute="width" secondItem="sNu-Sq-61S" secondAttribute="width" id="vFA-sE-VOE"/>
-                        <constraint firstItem="IXE-Ja-Lw0" firstAttribute="leading" secondItem="Vf9-0E-Bri" secondAttribute="leading" constant="25" id="xDQ-rH-xtE"/>
                         <constraint firstAttribute="trailing" secondItem="sNu-Sq-61S" secondAttribute="trailing" constant="16" id="yMi-xe-dmc"/>
                     </constraints>
                 </view>
@@ -196,8 +211,9 @@
         </view>
     </objects>
     <resources>
-        <image name="delete" width="24" height="24"/>
-        <image name="nodata" width="128" height="128"/>
-        <image name="upload" width="21" height="21"/>
+        <image name="delete" width="48" height="48"/>
+        <image name="ic_setting_white" width="48" height="48"/>
+        <image name="nodata" width="256" height="256"/>
+        <image name="upload" width="42" height="42"/>
     </resources>
 </document>

@@ -8,7 +8,6 @@
 
 #import "SettingsViewController.h"
 
-
 @interface SettingsViewController ()
 
 @end
@@ -17,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
 }
 

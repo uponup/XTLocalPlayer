@@ -60,13 +60,21 @@
 		39DF13BD237C05A900BF04F8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13BC237C05A900BF04F8 /* BaseViewController.m */; };
 		39DF13C0237C05B600BF04F8 /* UIViewController+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13BF237C05B600BF04F8 /* UIViewController+AOP.m */; };
 		39DF13C3237C05E100BF04F8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13C2237C05E100BF04F8 /* NavigationController.m */; };
-		39FBEB4A237F93E9008DE3A8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */; };
-		39FBEB4B237F93E9008DE3A8 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */; };
+
 		39FBEB54237F99BC008DE3A8 /* ImpactFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB53237F99BC008DE3A8 /* ImpactFeedback.m */; };
 		39FBEB57237FA090008DE3A8 /* Comets.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB56237FA090008DE3A8 /* Comets.m */; };
 		39FBEB5A237FA886008DE3A8 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB59237FA886008DE3A8 /* UIImage+Extend.m */; };
 		39FBEB6A237FB120008DE3A8 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB69237FB120008DE3A8 /* LaunchView.m */; };
 		39FBEB70237FB1B9008DE3A8 /* AppDelegate+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB6F237FB1B9008DE3A8 /* AppDelegate+Launch.m */; };
+
+		4B13028A23978B100069209E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B13028823978B100069209E /* SettingsViewController.m */; };
+		4B13028B23978B100069209E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B13028923978B100069209E /* SettingsViewController.xib */; };
+		4B13028F23978B200069209E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B13028D23978B200069209E /* AboutViewController.m */; };
+		4B13029023978B200069209E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B13028E23978B200069209E /* AboutViewController.xib */; };
+		4B130298239794D60069209E /* UIView+NibCreatable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B130297239794D60069209E /* UIView+NibCreatable.m */; };
+		4B1302A42397BB210069209E /* NormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1302A32397BB210069209E /* NormalView.m */; };
+		4B1302A62397BB2C0069209E /* NormalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1302A52397BB2C0069209E /* NormalView.xib */; };
+		4B1302A92397C6150069209E /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1302A82397C6150069209E /* NSString+Extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +193,19 @@
 		39FBEB6E237FB1B9008DE3A8 /* AppDelegate+Launch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Launch.h"; sourceTree = "<group>"; };
 		39FBEB6F237FB1B9008DE3A8 /* AppDelegate+Launch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Launch.m"; sourceTree = "<group>"; };
 		44973824B14B4C083E787DE0 /* Pods-XTLocalPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTLocalPlayer.debug.xcconfig"; path = "Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		4B13028723978B100069209E /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		4B13028823978B100069209E /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		4B13028923978B100069209E /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		4B13028C23978B200069209E /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		4B13028D23978B200069209E /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		4B13028E23978B200069209E /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		4B130296239794D60069209E /* UIView+NibCreatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+NibCreatable.h"; sourceTree = "<group>"; };
+		4B130297239794D60069209E /* UIView+NibCreatable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+NibCreatable.m"; sourceTree = "<group>"; };
+		4B1302A22397BB210069209E /* NormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalView.h; sourceTree = "<group>"; };
+		4B1302A32397BB210069209E /* NormalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalView.m; sourceTree = "<group>"; };
+		4B1302A52397BB2C0069209E /* NormalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalView.xib; sourceTree = "<group>"; };
+		4B1302A72397C6150069209E /* NSString+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
+		4B1302A82397C6150069209E /* NSString+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
 		E2D11304254F326B6FBEA159 /* Pods-XTLocalPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTLocalPlayer.release.xcconfig"; path = "Target Support Files/Pods-XTLocalPlayer/Pods-XTLocalPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		F9AF23AEAF8825989511FD28 /* Pods_XTLocalPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTLocalPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -348,8 +369,15 @@
 				39923D3B237E5A4F00EBDAD8 /* UITableView+Extend.m */,
 				39923D5A237EA7C800EBDAD8 /* NSFileManager+Category.h */,
 				39923D5B237EA7C800EBDAD8 /* NSFileManager+Category.m */,
+<<<<<<< HEAD
 				39FBEB58237FA886008DE3A8 /* UIImage+Extend.h */,
 				39FBEB59237FA886008DE3A8 /* UIImage+Extend.m */,
+=======
+				4B130296239794D60069209E /* UIView+NibCreatable.h */,
+				4B130297239794D60069209E /* UIView+NibCreatable.m */,
+				4B1302A72397C6150069209E /* NSString+Extend.h */,
+				4B1302A82397C6150069209E /* NSString+Extend.m */,
+>>>>>>> exp
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -495,9 +523,21 @@
 				39923C9F237D2EC000EBDAD8 /* TransportViewController.h */,
 				39923CA0237D2EC000EBDAD8 /* TransportViewController.m */,
 				39923CA1237D2EC000EBDAD8 /* TransportViewController.xib */,
+<<<<<<< HEAD
 				39FBEB47237F93E9008DE3A8 /* SettingsViewController.h */,
 				39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */,
 				39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */,
+=======
+				4B13028723978B100069209E /* SettingsViewController.h */,
+				4B13028823978B100069209E /* SettingsViewController.m */,
+				4B13028923978B100069209E /* SettingsViewController.xib */,
+				4B13028C23978B200069209E /* AboutViewController.h */,
+				4B13028D23978B200069209E /* AboutViewController.m */,
+				4B13028E23978B200069209E /* AboutViewController.xib */,
+				4B1302A22397BB210069209E /* NormalView.h */,
+				4B1302A32397BB210069209E /* NormalView.m */,
+				4B1302A52397BB2C0069209E /* NormalView.xib */,
+>>>>>>> exp
 				39923D3D237E5FC000EBDAD8 /* Views */,
 			);
 			name = Home;
@@ -617,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39923D2B237D68AA00EBDAD8 /* AudioDetailController.xib in Resources */,
+				4B1302A62397BB2C0069209E /* NormalView.xib in Resources */,
 				39923D07237D434300EBDAD8 /* README.txt in Resources */,
 				39923D38237E596400EBDAD8 /* VideoCell.xib in Resources */,
 				39923CA3237D2EC000EBDAD8 /* TransportViewController.xib in Resources */,
@@ -625,7 +666,12 @@
 				39DF13AC237C02E500BF04F8 /* LaunchScreen.storyboard in Resources */,
 				39DF13A9237C02E500BF04F8 /* Assets.xcassets in Resources */,
 				39923D30237D6A9C00EBDAD8 /* HomeViewController.xib in Resources */,
+<<<<<<< HEAD
 				39FBEB4B237F93E9008DE3A8 /* SettingsViewController.xib in Resources */,
+=======
+				4B13029023978B200069209E /* AboutViewController.xib in Resources */,
+				4B13028B23978B100069209E /* SettingsViewController.xib in Resources */,
+>>>>>>> exp
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +736,7 @@
 				39923D08237D434300EBDAD8 /* DDLog.m in Sources */,
 				39923CE2237D42EB00EBDAD8 /* DDData.m in Sources */,
 				39DF13C0237C05B600BF04F8 /* UIViewController+AOP.m in Sources */,
+				4B130298239794D60069209E /* UIView+NibCreatable.m in Sources */,
 				39923D04237D434300EBDAD8 /* DDASLLogger.m in Sources */,
 				39FBEB6A237FB120008DE3A8 /* LaunchView.m in Sources */,
 				39FBEB57237FA090008DE3A8 /* Comets.m in Sources */,
@@ -701,11 +748,14 @@
 				39923D3C237E5A4F00EBDAD8 /* UITableView+Extend.m in Sources */,
 				39923CA2237D2EC000EBDAD8 /* TransportViewController.m in Sources */,
 				39DF13C3237C05E100BF04F8 /* NavigationController.m in Sources */,
+				4B13028A23978B100069209E /* SettingsViewController.m in Sources */,
 				39923D27237D4EA500EBDAD8 /* Utils.m in Sources */,
 				39923CD4237D42EB00EBDAD8 /* HTTPErrorResponse.m in Sources */,
+				4B1302A92397C6150069209E /* NSString+Extend.m in Sources */,
 				39923D53237E7BB100EBDAD8 /* FileLogDao.m in Sources */,
 				39923CE1237D42EB00EBDAD8 /* DDNumber.m in Sources */,
 				39923CDB237D42EB00EBDAD8 /* HTTPConnection.m in Sources */,
+				4B1302A42397BB210069209E /* NormalView.m in Sources */,
 				39923D06237D434300EBDAD8 /* DispatchQueueLogFormatter.m in Sources */,
 				39923CDE237D42EB00EBDAD8 /* MultipartFormDataParser.m in Sources */,
 				39923CE0237D42EB00EBDAD8 /* HTTPAuthenticationRequest.m in Sources */,
@@ -719,6 +769,7 @@
 				39DF13BD237C05A900BF04F8 /* BaseViewController.m in Sources */,
 				39923D59237E84A900EBDAD8 /* FileModel.m in Sources */,
 				39923CD5237D42EB00EBDAD8 /* HTTPDataResponse.m in Sources */,
+				4B13028F23978B200069209E /* AboutViewController.m in Sources */,
 				39923D2F237D6A9C00EBDAD8 /* HomeViewController.m in Sources */,
 				39923D37237E596400EBDAD8 /* VideoCell.m in Sources */,
 				39DF13A1237C02E500BF04F8 /* AppDelegate.m in Sources */,
@@ -863,8 +914,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5C6CFW7YT9;
-				GCC_PREFIX_HEADER = /Users/paulgao/learn/TmTech/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = KY9HF8C4PA;
+				GCC_PREFIX_HEADER = /Users/upon/upon/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = XTLocalPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -887,8 +938,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5C6CFW7YT9;
-				GCC_PREFIX_HEADER = /Users/paulgao/learn/TmTech/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = KY9HF8C4PA;
+				GCC_PREFIX_HEADER = /Users/upon/upon/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = XTLocalPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
