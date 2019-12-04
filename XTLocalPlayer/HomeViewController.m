@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "TransportViewController.h"
 #import "AudioDetailController.h"
+#import "AboutViewController.h"
 
 #import "VideoCell.h"
 #import "UITableView+Extend.h"
@@ -56,6 +57,10 @@
 - (IBAction)deleteButtonAction:(id)sender {
     // todo delete
     
+}
+- (IBAction)settingAction:(id)sender {
+    AboutViewController *aboutVc = [AboutViewController new];
+    [self.navigationController pushViewController:aboutVc animated:YES];
 }
 
 - (IBAction)localButtonAction:(id)sender {
