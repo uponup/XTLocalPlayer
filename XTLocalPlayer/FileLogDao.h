@@ -16,8 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)addFileLog:(FileModel *)model;
 // 删除
 + (void)deleteFileLogs:(NSArray<FileModel *> *)modelArr;
+// 改
++ (void)updatePlayCountWithModel:(FileModel *)fileModel;
 // 查
 + (NSArray<FileModel *> *)allFileLogs;
++ (NSArray<FileModel *> *)allHistoryLogs;
 
 @end
 

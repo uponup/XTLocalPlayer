@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="btnAdd" destination="PRe-ha-qYe" id="Nos-zs-DHK"/>
                 <outlet property="btnDelete" destination="sNu-Sq-61S" id="eWm-RL-QyT"/>
                 <outlet property="layoutLocalBtnCenter" destination="v1u-vu-ZpL" id="8hf-ZQ-oN1"/>
                 <outlet property="nodataView" destination="Sye-aI-Dde" id="vNb-X4-fuS"/>

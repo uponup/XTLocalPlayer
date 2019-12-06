@@ -80,6 +80,27 @@ static FMDatabaseQueue *_dbQueue;
     return fileLogs;
 }
 
++ (NSArray<FileModel *> *)allHistoryLogs {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    __block NSMutableArray *fileLogs = [NSMutableArray arrayWithCapacity:0];
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        NSString *sql = @"select *from xt_localfiles where play_count > 0";
+        FMResultSet *rs = [db executeQuery:sql];
+        while ([rs next]) {
+            FileModel *model = [FileModel alloc];
+            model.name = [rs stringForColumn:@"name"];
+            model.timestamp = [rs doubleForColumn:@"timestamp"];
+            model.path = [rs stringForColumn:@"path"];
+            model.progress = [rs doubleForColumn:@"progress"];
+            model.playCount = [rs intForColumn:@"play_count"];
+            [fileLogs addObject:model];
+        }
+        dispatch_semaphore_signal(semaphore);
+    }];
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    return fileLogs;
+}
+
 
 // 判断FileLog是否存在
 + (BOOL)isExistFileLogWithPath:(NSString *)path {
@@ -94,5 +115,11 @@ static FMDatabaseQueue *_dbQueue;
     return hasNext;
 }
 
+
++ (void)updatePlayCountWithModel:(FileModel *)fileModel {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        [db executeUpdate:@"update xt_localfiles set play_count = ? where path = ?", @(fileModel.playCount), fileModel.path];
+    }];
+}
 
 @end

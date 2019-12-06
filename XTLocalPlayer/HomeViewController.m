@@ -15,15 +15,19 @@
 #import "UITableView+Extend.h"
 
 
-@interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface HomeViewController () <UITableViewDelegate, UITableViewDataSource> {
+    NSInteger _currentIndex;    // 当前标签：0，本地视频，1，历史记录
+}
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *layoutLocalBtnCenter;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *sliderBlockView;
 @property (weak, nonatomic) IBOutlet UIButton *btnDelete;
+@property (weak, nonatomic) IBOutlet UIButton *btnAdd;      
 @property (weak, nonatomic) IBOutlet UIView *nodataView;
 
-@property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSMutableArray *localArr;
+@property (nonatomic, strong) NSMutableArray *historyArr;
 
 @end
 
@@ -80,8 +84,14 @@
 
 #pragma mark - UITableViewDelegate && UITableViewDataSources
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.nodataView.hidden = self.dataArr.count != 0;
-    self.tableView.hidden = self.dataArr.count == 0;
+    
+    if (_currentIndex == 0) {
+        
+        self.nodataView.hidden = self.localArr.count != 0;
+        self.tableView.hidden = self.localArr.count == 0;
+    }else {
+        
+    }
     
     return self.dataArr.count;
 }
@@ -112,11 +122,19 @@
 }
 
 #pragma mark - Lazy Method
-- (NSMutableArray *)dataArr {
-    if (!_dataArr) {
-        _dataArr = [NSMutableArray arrayWithCapacity:0];
+
+- (NSMutableArray *)localArr {
+    if (_localArr) {
+        _localArr = [NSMutableArray arrayWithCapacity:0];
     }
-    return _dataArr;
+    return _localArr;
+}
+
+- (NSMutableArray *)historyArr {
+    if (!_historyArr) {
+        _historyArr = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _historyArr;
 }
 
 @end

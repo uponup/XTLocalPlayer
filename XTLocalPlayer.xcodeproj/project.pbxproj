@@ -60,13 +60,11 @@
 		39DF13BD237C05A900BF04F8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13BC237C05A900BF04F8 /* BaseViewController.m */; };
 		39DF13C0237C05B600BF04F8 /* UIViewController+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13BF237C05B600BF04F8 /* UIViewController+AOP.m */; };
 		39DF13C3237C05E100BF04F8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13C2237C05E100BF04F8 /* NavigationController.m */; };
-
 		39FBEB54237F99BC008DE3A8 /* ImpactFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB53237F99BC008DE3A8 /* ImpactFeedback.m */; };
 		39FBEB57237FA090008DE3A8 /* Comets.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB56237FA090008DE3A8 /* Comets.m */; };
 		39FBEB5A237FA886008DE3A8 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB59237FA886008DE3A8 /* UIImage+Extend.m */; };
 		39FBEB6A237FB120008DE3A8 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB69237FB120008DE3A8 /* LaunchView.m */; };
 		39FBEB70237FB1B9008DE3A8 /* AppDelegate+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBEB6F237FB1B9008DE3A8 /* AppDelegate+Launch.m */; };
-
 		4B13028A23978B100069209E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B13028823978B100069209E /* SettingsViewController.m */; };
 		4B13028B23978B100069209E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B13028923978B100069209E /* SettingsViewController.xib */; };
 		4B13028F23978B200069209E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B13028D23978B200069209E /* AboutViewController.m */; };
@@ -179,9 +177,6 @@
 		39DF13C6237C061700BF04F8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		39DF13CA237C087800BF04F8 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		39DF13CB237C088B00BF04F8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		39FBEB47237F93E9008DE3A8 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		39FBEB48237F93E9008DE3A8 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		39FBEB49237F93E9008DE3A8 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		39FBEB52237F99BC008DE3A8 /* ImpactFeedback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImpactFeedback.h; sourceTree = "<group>"; };
 		39FBEB53237F99BC008DE3A8 /* ImpactFeedback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImpactFeedback.m; sourceTree = "<group>"; };
 		39FBEB55237FA090008DE3A8 /* Comets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comets.h; sourceTree = "<group>"; };
@@ -727,7 +722,6 @@
 				39923D04237D434300EBDAD8 /* DDASLLogger.m in Sources */,
 				39FBEB6A237FB120008DE3A8 /* LaunchView.m in Sources */,
 				39FBEB57237FA090008DE3A8 /* Comets.m in Sources */,
-				39FBEB4A237F93E9008DE3A8 /* SettingsViewController.m in Sources */,
 				39923C92237D1B1C00EBDAD8 /* JPPopMenuView.m in Sources */,
 				39923CEC237D431700EBDAD8 /* MyHTTPConnection.m in Sources */,
 				39923CD9237D42EB00EBDAD8 /* HTTPRedirectResponse.m in Sources */,

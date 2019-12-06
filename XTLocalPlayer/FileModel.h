@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *path;
 @property (nonatomic, assign) NSTimeInterval timestamp;
 @property (nonatomic, assign) CGFloat progress;
-@property (nonatomic, assign) CGFloat playCount;
+@property (nonatomic, assign) NSInteger playCount;
 
 - (instancetype)initWithName:(NSString *)name andPath:(NSString *)path;
 

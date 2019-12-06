@@ -61,7 +61,7 @@
             @"value": @"uponup@163.com",
         }];
         
-        NSString *mesg = [NSString stringWithFormat:NSLocalizedString(@"感谢您选择这款应用，如果您能给我们一些反馈信息那就跟好了。您可以选择以下%@个渠道与我们联系：", nil), @(contactChannel.count)];
+        NSString *mesg = [NSString stringWithFormat:NSLocalizedString(@"感谢您选择这款应用。如果您遇到问题，您可以选择以下%@个渠道与我们联系：", nil), @(contactChannel.count)];
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"联系我们", nil) message:mesg preferredStyle:UIAlertControllerStyleActionSheet];
         for (NSInteger i=0; i<contactChannel.count; i++) {
             NSDictionary *channel = contactChannel[i];
