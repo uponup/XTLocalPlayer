@@ -53,6 +53,7 @@
 		39923D56237E83EC00EBDAD8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39923D55237E83EC00EBDAD8 /* BaseModel.m */; };
 		39923D59237E84A900EBDAD8 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39923D58237E84A900EBDAD8 /* FileModel.m */; };
 		39923D5C237EA7C800EBDAD8 /* NSFileManager+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 39923D5B237EA7C800EBDAD8 /* NSFileManager+Category.m */; };
+		39ABADEE239BE44A0081A59D /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 39ABADED239BE44A0081A59D /* Hud.m */; };
 		39DF13A1237C02E500BF04F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF13A0237C02E500BF04F8 /* AppDelegate.m */; };
 		39DF13A9237C02E500BF04F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39DF13A8237C02E500BF04F8 /* Assets.xcassets */; };
 		39DF13AC237C02E500BF04F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DF13AA237C02E500BF04F8 /* LaunchScreen.storyboard */; };
@@ -161,6 +162,8 @@
 		39923D58237E84A900EBDAD8 /* FileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
 		39923D5A237EA7C800EBDAD8 /* NSFileManager+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Category.h"; sourceTree = "<group>"; };
 		39923D5B237EA7C800EBDAD8 /* NSFileManager+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Category.m"; sourceTree = "<group>"; };
+		39ABADEC239BE44A0081A59D /* Hud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
+		39ABADED239BE44A0081A59D /* Hud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
 		39DF139C237C02E500BF04F8 /* XTLocalPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTLocalPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DF139F237C02E500BF04F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39DF13A0237C02E500BF04F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -457,6 +460,8 @@
 				39923D39237E5A2600EBDAD8 /* Category */,
 				39923D25237D4EA500EBDAD8 /* Utils.h */,
 				39923D26237D4EA500EBDAD8 /* Utils.m */,
+				39ABADEC239BE44A0081A59D /* Hud.h */,
+				39ABADED239BE44A0081A59D /* Hud.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -757,6 +762,7 @@
 				39923CD6237D42EB00EBDAD8 /* HTTPDynamicFileResponse.m in Sources */,
 				39923CD7237D42EB00EBDAD8 /* HTTPFileResponse.m in Sources */,
 				39923D5C237EA7C800EBDAD8 /* NSFileManager+Category.m in Sources */,
+				39ABADEE239BE44A0081A59D /* Hud.m in Sources */,
 				39923CE4237D42EB00EBDAD8 /* HTTPServer.m in Sources */,
 				39923CD8237D42EB00EBDAD8 /* HTTPAsyncFileResponse.m in Sources */,
 			);
@@ -896,7 +902,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KY9HF8C4PA;
-				GCC_PREFIX_HEADER = /Users/upon/upon/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/paulgao/upon/TmTech/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = XTLocalPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -920,7 +926,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KY9HF8C4PA;
-				GCC_PREFIX_HEADER = /Users/upon/upon/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/paulgao/upon/TmTech/XTLocalPlayer/XTLocalPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = XTLocalPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

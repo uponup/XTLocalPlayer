@@ -69,31 +69,36 @@
 }
 
 - (IBAction)localButtonAction:(id)sender {
+    _currentIndex = 0;
     [UIView animateWithDuration:0.27 animations:^{
         self.layoutLocalBtnCenter.constant = 0;
         [self.view layoutIfNeeded];
     }];
+    [self.tableView reloadData];
 }
 
 - (IBAction)historyButtonAction:(id)sender {
+    _currentIndex = 1;
     [UIView animateWithDuration:0.27 animations:^{
         self.layoutLocalBtnCenter.constant = kScreen_W/2;
         [self.view layoutIfNeeded];
     }];
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSources
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+    self.nodataView.hidden = self.localArr.count != 0;
+
     if (_currentIndex == 0) {
-        
-        self.nodataView.hidden = self.localArr.count != 0;
         self.tableView.hidden = self.localArr.count == 0;
+        self.btnAdd.hidden = NO;
+        return self.localArr.count;
     }else {
-        
+        self.tableView.hidden = self.historyArr.count == 0;
+        self.btnAdd.hidden = YES;
+        return self.historyArr.count;
     }
-    
-    return self.dataArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,13 +107,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([VideoCell class]) forIndexPath:indexPath];
-    FileModel *model = self.dataArr[indexPath.row];
+    FileModel *model = _currentIndex==0 ? self.localArr[indexPath.row] : self.historyArr[indexPath.row];
     cell.model = model;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FileModel *model = self.dataArr[indexPath.row];
+    FileModel *model = _currentIndex==0 ? self.localArr[indexPath.row] : self.historyArr[indexPath.row];
     AudioDetailController *videoVc = [AudioDetailController new];
     videoVc.fileModel = model;
     [self.navigationController pushViewController:videoVc animated:YES];
@@ -116,8 +121,12 @@
 
 #pragma mark - Private Method
 - (void)refreshData {
-    [self.dataArr removeAllObjects];
-    [self.dataArr addObjectsFromArray:[FileLogDao allFileLogs]];
+    [self.localArr removeAllObjects];
+    [self.localArr addObjectsFromArray:[FileLogDao allFileLogs]];
+    
+    [self.historyArr removeAllObjects];
+    [self.historyArr addObjectsFromArray:[FileLogDao allHistoryLogs]];
+    
     [self.tableView reloadData];
 }
 

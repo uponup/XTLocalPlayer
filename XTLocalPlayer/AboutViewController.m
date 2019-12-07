@@ -14,7 +14,6 @@
 #import "NSString+Extend.h"
 
 
-
 @interface AboutViewController ()<MFMailComposeViewControllerDelegate>
 @property (nonatomic, strong) IBOutlet UIImageView *ivLogo;
 @property (nonatomic, strong) IBOutlet UILabel *labelDetail;
@@ -85,15 +84,19 @@
                         error:(NSError *)error {
     switch (result){
         case MFMailComposeResultCancelled: // 用户取消编辑
+            [Hud showInfoWithStatus:NSLocalizedString(@"Send mail canceled!", nil)];
             CLog(@"Mail send canceled...");
             break;
         case MFMailComposeResultSaved: // 用户保存邮件
+            [Hud showInfoWithStatus:NSLocalizedString(@"Save success!", nil)];
             CLog(@"Mail saved...");
             break;
         case MFMailComposeResultSent: // 用户点击发送
+            [Hud showErrorWithStatus:NSLocalizedString(@"Mail sent...", nil)];
             CLog(@"Mail sent...");
             break;
         case MFMailComposeResultFailed: // 用户尝试保存或发送邮件失败
+            [Hud showErrorWithStatus:NSLocalizedString(@"Send mail errored", nil)];
             CLog(@"Mail send errored: %@...", [error localizedDescription]);
             break;
     }
@@ -151,6 +154,7 @@
         [self presentViewController:mailCompose animated:YES completion:nil];
         
     }else{
+        [Hud showInfoWithStatus:NSLocalizedString(@"Please log in to your email and  send support mail.", nil)];
         CLog(@"Please log in to your email and  send support mail.");
     }
 }
