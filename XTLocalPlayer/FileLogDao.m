@@ -53,7 +53,6 @@ static FMDatabaseQueue *_dbQueue;
 
 // 查
 + (NSArray<FileModel *> *)allFileLogs {
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0); //创建信号量
     __block NSMutableArray *fileLogs = [NSMutableArray arrayWithCapacity:0];
     [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSString *sql = @"select * from xt_localfiles";
@@ -70,14 +69,11 @@ static FMDatabaseQueue *_dbQueue;
             [fileLogs addObject:model];
             CLog(@"%@", model);
         }
-        dispatch_semaphore_signal(semaphore);
     }];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return fileLogs;
 }
 
 + (NSArray<FileModel *> *)allHistoryLogs {
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     __block NSMutableArray *fileLogs = [NSMutableArray arrayWithCapacity:0];
     [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSString *sql = @"select *from xt_localfiles where progress > 0";
@@ -91,9 +87,7 @@ static FMDatabaseQueue *_dbQueue;
             model.playCount = [rs intForColumn:@"play_count"];
             [fileLogs addObject:model];
         }
-        dispatch_semaphore_signal(semaphore);
     }];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return fileLogs;
 }
 
@@ -101,13 +95,10 @@ static FMDatabaseQueue *_dbQueue;
 // 判断FileLog是否存在
 + (BOOL)isExistFileLogWithPath:(NSString *)path {
     __block BOOL hasNext = NO;
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         FMResultSet *rs = [db executeQuery:@"select * from xt_localfiles where path = ?;", path];
         hasNext = [rs next];
-        dispatch_semaphore_signal(semaphore);
     }];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return hasNext;
 }
 

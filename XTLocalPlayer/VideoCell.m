@@ -21,8 +21,11 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.ivMark.hidden = YES;
     
-    self.selectionStyle = UITableViewCellSeparatorStyleNone;
+    self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
+    self.selectedBackgroundView.backgroundColor = UIColor.whiteColor;
+    self.tintColor = GlobalThemeColor;
 }
 
 - (void)setModel:(FileModel *)model {
@@ -37,7 +40,6 @@
 #pragma mark - Private Method
 // 获取视频封面
 - (UIImage*)_thumbnailImageForVideo:(NSString *)path atTime:(NSTimeInterval)time {
-//    path = [[NSBundle mainBundle] pathForResource:@"record_01" ofType:@"mp4"];
     NSURL *videoURL = [NSURL fileURLWithPath:path];
     CLog(@"====>: %@", videoURL);
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
@@ -54,7 +56,7 @@
     if(!thumbnailImageRef)
         NSLog(@"thumbnailImageGenerationError %@",thumbnailImageGenerationError);
     
-    UIImage*thumbnailImage = thumbnailImageRef ? [[UIImage alloc]initWithCGImage: thumbnailImageRef] : nil;
+    UIImage*thumbnailImage = thumbnailImageRef ? [[UIImage alloc]initWithCGImage: thumbnailImageRef] : [UIImage imageNamed:@"default_img.png"];
     
     return thumbnailImage;
 }

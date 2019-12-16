@@ -23,11 +23,14 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *sliderBlockView;
 @property (weak, nonatomic) IBOutlet UIButton *btnDelete;
-@property (weak, nonatomic) IBOutlet UIButton *btnAdd;      
+@property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 @property (weak, nonatomic) IBOutlet UIView *nodataView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *layoutTableBottom;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView;
 
 @property (nonatomic, strong) NSMutableArray *localArr;
 @property (nonatomic, strong) NSMutableArray *historyArr;
+@property (nonatomic, strong) NSMutableArray *dataArr;
 
 @end
 
@@ -54,15 +57,48 @@
 
 #pragma mark - Click Action
 
+- (IBAction)selectAllAction:(UIButton *)sender {
+    if ([[sender titleForState:UIControlStateNormal] isEqualToString:NSLocalizedString(@"全选", nil)]) {
+        [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            CLog(@"===>:%@", @(idx));
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+            [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        }];
+        [sender setTitle:NSLocalizedString(@"取消全选", nil) forState:UIControlStateNormal];
+    }else {
+        [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+            [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+        }];
+        [sender setTitle:NSLocalizedString(@"全选", nil) forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)deleteAllAction:(id)sender {
+    NSMutableArray *selectedArr = [NSMutableArray arrayWithCapacity:0];
+    [[self.tableView indexPathsForSelectedRows] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        FileModel *model = self.dataArr[obj.row];
+        [selectedArr addObject:model];
+    }];
+    
+    [Hud showSuccessWithStatus:NSLocalizedString(@"删除成功!", nil)];
+    [self refreshData];
+}
+
 - (IBAction)uploadButtonAction:(id)sender {
     TransportViewController *transportVc = [TransportViewController new];
     [self.navigationController pushViewController:transportVc animated:YES];
 }
 
 - (IBAction)deleteButtonAction:(id)sender {
-    // todo delete
-    
+    self.tableView.editing = !self.tableView.editing;
+    [UIView animateWithDuration:0.27 animations:^{
+        self.layoutTableBottom.constant = self.tableView.editing ? 0 : 46;
+        self.stackView.hidden = !self.tableView.editing;
+        [self.view layoutIfNeeded];
+    }];
 }
+
 - (IBAction)settingAction:(id)sender {
     AboutViewController *aboutVc = [AboutViewController new];
     [self.navigationController pushViewController:aboutVc animated:YES];
@@ -109,26 +145,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([VideoCell class]) forIndexPath:indexPath];
-    FileModel *model = _currentIndex==0 ? self.localArr[indexPath.row] : self.historyArr[indexPath.row];
+    FileModel *model = self.dataArr[indexPath.row];
     cell.model = model;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FileModel *model = _currentIndex==0 ? self.localArr[indexPath.row] : self.historyArr[indexPath.row];
+    if (tableView.isEditing) {
+        [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+        return;
+    }
+    
+    FileModel *model = self.dataArr[indexPath.row];
     AudioDetailController *videoVc = [AudioDetailController new];
     videoVc.fileModel = model;
     [self.navigationController pushViewController:videoVc animated:YES];
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert;
+}
+
 #pragma mark - Private Method
 - (void)refreshData {
+    [self.dataArr removeAllObjects];
     if (_currentIndex == 0) {
-        [self.localArr removeAllObjects];
-        [self.localArr addObjectsFromArray:[FileLogDao allFileLogs]];
+        [self.dataArr addObjectsFromArray:self.localArr];
     }else {
-        [self.historyArr removeAllObjects];
-        [self.historyArr addObjectsFromArray:[FileLogDao allHistoryLogs]];
+        [self.dataArr addObjectsFromArray:self.historyArr];
     }
     [self.tableView reloadData];
 }
@@ -137,16 +181,24 @@
 
 - (NSMutableArray *)localArr {
     if (!_localArr) {
-        _localArr = [NSMutableArray arrayWithCapacity:0];
+        _localArr = [NSMutableArray arrayWithArray:[FileLogDao allFileLogs]];
+;
     }
     return _localArr;
 }
 
 - (NSMutableArray *)historyArr {
     if (!_historyArr) {
-        _historyArr = [NSMutableArray arrayWithCapacity:0];
+        _historyArr = [NSMutableArray arrayWithArray:[FileLogDao allHistoryLogs]];
     }
     return _historyArr;
+}
+
+- (NSMutableArray *)dataArr {
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _dataArr;
 }
 
 @end

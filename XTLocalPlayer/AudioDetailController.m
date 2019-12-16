@@ -25,6 +25,8 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = self.fileModel.name;
 
     [self.view addSubview:self.containerView];
 

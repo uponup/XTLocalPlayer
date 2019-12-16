@@ -15,8 +15,10 @@
                 <outlet property="btnAdd" destination="PRe-ha-qYe" id="Nos-zs-DHK"/>
                 <outlet property="btnDelete" destination="sNu-Sq-61S" id="eWm-RL-QyT"/>
                 <outlet property="layoutLocalBtnCenter" destination="v1u-vu-ZpL" id="8hf-ZQ-oN1"/>
+                <outlet property="layoutTableBottom" destination="cFW-E3-3CU" id="cZf-lx-Lls"/>
                 <outlet property="nodataView" destination="Sye-aI-Dde" id="vNb-X4-fuS"/>
                 <outlet property="sliderBlockView" destination="dVS-el-N2G" id="fna-YN-qow"/>
+                <outlet property="stackView" destination="ziN-BV-5U9" id="0Xu-Gd-tvo"/>
                 <outlet property="tableView" destination="CQ7-Oy-Mof" id="GCp-Iz-GvW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -191,6 +193,35 @@
                         <outlet property="delegate" destination="-1" id="v0h-8w-lXe"/>
                     </connections>
                 </tableView>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ziN-BV-5U9">
+                    <rect key="frame" x="0.0" y="862" width="414" height="46"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olc-ee-EaO">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="46"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.55294117647058827" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="全选">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="selectAllAction:" destination="-1" eventType="touchUpInside" id="8dE-Ml-RiF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-3Y-G5B">
+                            <rect key="frame" x="207" y="0.0" width="207" height="46"/>
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="删除">
+                                <color key="titleColor" red="0.94117647059999998" green="0.93725490199999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteAllAction:" destination="-1" eventType="touchUpInside" id="t6s-k2-dJs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Ctr-LA-g6B"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -199,12 +230,15 @@
                 <constraint firstAttribute="top" secondItem="Vf9-0E-Bri" secondAttribute="bottom" constant="-143" id="9hz-D4-XX7"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CQ7-Oy-Mof" secondAttribute="trailing" id="A3M-GV-f03"/>
                 <constraint firstItem="Sye-aI-Dde" firstAttribute="top" secondItem="Vf9-0E-Bri" secondAttribute="bottom" constant="75" id="DEE-pt-qXV"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="CQ7-Oy-Mof" secondAttribute="bottom" id="KEW-4s-wzu"/>
+                <constraint firstItem="CQ7-Oy-Mof" firstAttribute="bottom" secondItem="ziN-BV-5U9" secondAttribute="top" id="FL7-81-S1O"/>
                 <constraint firstItem="Vf9-0E-Bri" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="OiT-OY-dzt"/>
                 <constraint firstItem="Sye-aI-Dde" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Psu-uo-L7Y"/>
                 <constraint firstItem="Vf9-0E-Bri" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Sjc-x6-sl2"/>
+                <constraint firstItem="ziN-BV-5U9" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" constant="46" id="cFW-E3-3CU"/>
+                <constraint firstItem="ziN-BV-5U9" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="gfb-1k-OJ7"/>
                 <constraint firstItem="CQ7-Oy-Mof" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="mK1-RI-bN8"/>
                 <constraint firstItem="CQ7-Oy-Mof" firstAttribute="top" secondItem="Vf9-0E-Bri" secondAttribute="bottom" id="svk-MK-ByA"/>
+                <constraint firstItem="ziN-BV-5U9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="tVJ-Of-RnO"/>
                 <constraint firstItem="Sye-aI-Dde" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="vDq-J7-eiz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
