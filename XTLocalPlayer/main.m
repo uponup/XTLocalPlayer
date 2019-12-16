@@ -12,9 +12,6 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        
-//        [FileLogDao test];
-
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
