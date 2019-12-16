@@ -46,6 +46,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SVProgressHUD.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>ZFPlayer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>

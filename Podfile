@@ -13,5 +13,6 @@ target 'XTLocalPlayer' do
   pod 'ZFPlayer/ControlView', '~> 3.0'
   pod 'PureLayout', '~> 3.0'
   pod 'FMDB', '~> 2.7.5'
+  pod 'SVProgressHUD'
 #  pod 'CocoaHTTPServer', '~> 2.3'
 end

@@ -69,6 +69,7 @@
 }
 
 - (IBAction)localButtonAction:(id)sender {
+    _currentIndex = 0;
     [UIView animateWithDuration:0.27 animations:^{
         self.layoutLocalBtnCenter.constant = 0;
         [self.view layoutIfNeeded];
@@ -78,6 +79,7 @@
 }
 
 - (IBAction)historyButtonAction:(id)sender {
+    _currentIndex = 1;
     [UIView animateWithDuration:0.27 animations:^{
         self.layoutLocalBtnCenter.constant = kScreen_W/2;
         [self.view layoutIfNeeded];
@@ -88,7 +90,8 @@
 
 #pragma mark - UITableViewDelegate && UITableViewDataSources
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+    self.nodataView.hidden = self.localArr.count != 0;
+
     if (_currentIndex == 0) {
         self.btnAdd.hidden = NO;
         self.nodataView.hidden = self.localArr.count != 0;

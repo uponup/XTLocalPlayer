@@ -6,6 +6,7 @@ PODS:
     - MJRefresh (~> 3.2.0)
   - MJRefresh (3.2.0)
   - PureLayout (3.1.5)
+  - SVProgressHUD (2.2.5)
   - ZFPlayer (3.2.13):
     - ZFPlayer/Core (= 3.2.13)
   - ZFPlayer/AVPlayer (3.2.13):
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - FMDB (~> 2.7.5)
   - JPKit
   - PureLayout (~> 3.0)
+  - SVProgressHUD
   - ZFPlayer (~> 3.0)
   - ZFPlayer/AVPlayer (~> 3.0)
   - ZFPlayer/ControlView (~> 3.0)
@@ -29,6 +31,7 @@ SPEC REPOS:
     - FMDB
     - MJRefresh
     - PureLayout
+    - SVProgressHUD
     - ZFPlayer
 
 SPEC CHECKSUMS:
@@ -36,8 +39,9 @@ SPEC CHECKSUMS:
   JPKit: 0beeffc896ebfec799c2d8b2060fbe0cdb29b7c4
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   ZFPlayer: b2ba40c924e1b9a7f0a670632c4235ffbe6ee055
 
-PODFILE CHECKSUM: 86c80de372f5f70df78041f6ac008c6ac0bcf912
+PODFILE CHECKSUM: 95d35b4d5f2dac9dcccc194c549777a9bec17005
 
 COCOAPODS: 1.8.0
