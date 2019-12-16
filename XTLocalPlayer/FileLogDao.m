@@ -55,7 +55,6 @@ static FMDatabaseQueue *_dbQueue;
 + (NSArray<FileModel *> *)allFileLogs {
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0); //创建信号量
     __block NSMutableArray *fileLogs = [NSMutableArray arrayWithCapacity:0];
-    CLog(@"====0");
     [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSString *sql = @"select * from xt_localfiles";
         
@@ -71,12 +70,9 @@ static FMDatabaseQueue *_dbQueue;
             [fileLogs addObject:model];
             CLog(@"%@", model);
         }
-        CLog(@"====1");
         dispatch_semaphore_signal(semaphore);
     }];
-    CLog(@"====2");
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    CLog(@"====3");
     return fileLogs;
 }
 
@@ -84,7 +80,7 @@ static FMDatabaseQueue *_dbQueue;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     __block NSMutableArray *fileLogs = [NSMutableArray arrayWithCapacity:0];
     [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
-        NSString *sql = @"select *from xt_localfiles where play_count > 0";
+        NSString *sql = @"select *from xt_localfiles where progress > 0";
         FMResultSet *rs = [db executeQuery:sql];
         while ([rs next]) {
             FileModel *model = [FileModel alloc];
