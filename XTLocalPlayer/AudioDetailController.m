@@ -34,11 +34,24 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
     self.player.controlView = self.controlView;
     /// 设置退到后台继续播放
     self.player.pauseWhenAppResignActive = NO;
+    [self.player seekToTime:self.fileModel.progress completionHandler:nil];
     
     @weakify(self)
     self.player.orientationWillChange = ^(ZFPlayerController * _Nonnull player, BOOL isFullScreen) {
         @strongify(self)
         [self setNeedsStatusBarAppearanceUpdate];
+    };
+    
+    /// 正在播放
+    self.player.playerPlayTimeChanged = ^(id<ZFPlayerMediaPlayback>  _Nonnull asset, NSTimeInterval currentTime, NSTimeInterval duration) {
+        @strongify(self)
+        [FileLogDao updateProgress:currentTime withPath:self.fileModel.path];
+        
+        if (currentTime == duration) {
+            // 保存播放记录
+            self.fileModel.playCount += 1;
+            [FileLogDao updatePlayCountWithModel:self.fileModel];
+        }
     };
     
     /// 播放完成

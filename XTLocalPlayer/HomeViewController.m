@@ -90,8 +90,6 @@
 
 #pragma mark - UITableViewDelegate && UITableViewDataSources
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.nodataView.hidden = self.localArr.count != 0;
-
     if (_currentIndex == 0) {
         self.btnAdd.hidden = NO;
         self.nodataView.hidden = self.localArr.count != 0;
@@ -128,7 +126,6 @@
     if (_currentIndex == 0) {
         [self.localArr removeAllObjects];
         [self.localArr addObjectsFromArray:[FileLogDao allFileLogs]];
-        [self.tableView reloadData];
     }else {
         [self.historyArr removeAllObjects];
         [self.historyArr addObjectsFromArray:[FileLogDao allHistoryLogs]];
@@ -139,7 +136,7 @@
 #pragma mark - Lazy Method
 
 - (NSMutableArray *)localArr {
-    if (_localArr) {
+    if (!_localArr) {
         _localArr = [NSMutableArray arrayWithCapacity:0];
     }
     return _localArr;

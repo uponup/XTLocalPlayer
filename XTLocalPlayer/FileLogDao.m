@@ -118,4 +118,10 @@ static FMDatabaseQueue *_dbQueue;
     }];
 }
 
++ (void)updateProgress:(NSTimeInterval)progress withPath:(NSString *)path {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        [db executeUpdate:@"update xt_localfiles set progress = ? where path = ?", @(progress), path];
+    }];
+}
+
 @end

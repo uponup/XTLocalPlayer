@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)deleteFileLogs:(NSArray<FileModel *> *)modelArr;
 // 改
 + (void)updatePlayCountWithModel:(FileModel *)fileModel;
++ (void)updateProgress:(NSTimeInterval)progress withPath:(NSString *)path;
 // 查
 + (NSArray<FileModel *> *)allFileLogs;
 + (NSArray<FileModel *> *)allHistoryLogs;
